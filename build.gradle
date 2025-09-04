@@ -13,7 +13,7 @@ java {
 }
 
 bootJar {
-    archiveFileName = "app.jar"
+    archiveFileName = "notes.jar"
 }
 
 configurations {
