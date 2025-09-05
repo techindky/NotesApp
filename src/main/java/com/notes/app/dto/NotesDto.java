@@ -2,11 +2,14 @@ package com.notes.app.dto;
 
 import com.notes.app.entity.Note;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Getter
 @Setter
+@NoArgsConstructor
 public class NotesDto {
+    private Long noteId;
     private String title;
     private String content;
     private boolean publicVisible;
@@ -15,6 +18,7 @@ public class NotesDto {
     private String updatedAt;
 
     public NotesDto(Note note) {
+        this.noteId = note.getId();
         this.title = note.getTitle();
         this.content = note.getContent();
         this.publicVisible = note.isPublicVisible();
